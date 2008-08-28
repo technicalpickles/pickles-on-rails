@@ -1,23 +1,17 @@
+defaults: &defaults
+ adapter: mysql
+ username: root
+ password: 
+ host: localhost
+
 development:
-  adapter: mysql
-  encoding: utf8
-  database: APPNAME_development
-  username: root
-  password:
-  socket: /tmp/mysql.sock
+ database: APPNAME_dev
+ <<: *defaults
 
 test:
-  adapter: mysql
-  encoding: utf8
-  database: APPNAME_test
-  username: root
-  password:
-  socket: /tmp/mysql.sock
+ database: APPNAME_test
+ <<: *defaults
 
 production:
-  adapter: mysql
-  encoding: utf8
-  database: APPNAME_production
-  username: root
-  password: 
-  socket: /tmp/mysql.sock
+ database: APPNAME_production
+ <<: *defaults
