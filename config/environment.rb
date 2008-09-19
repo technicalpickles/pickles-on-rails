@@ -9,5 +9,8 @@ Rails::Initializer.run do |config|
     :secret      => 'sekrit'
   }
   config.gem 'haml'
+  config.gem 'mislav-will_paginate',      
+                                          :lib => 'will_paginate', 
+                                          :source => 'http://gems.github.com/'
   config.gem 'dancroak-clearance', :lib => 'clearance', :source => 'http://gems.github.com'
 end
